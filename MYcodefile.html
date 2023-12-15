@@ -1,0 +1,870 @@
++================1===================+
+How to redirect HTTP to HTTPS Using .htaccess                 |        
++===================================+
+
+
+https://www.freecodecamp.org/news/how-to-redirect-http-to-https-using-htaccess/
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://azureautodetailing.com/$1 [R,L]
+
+
++===================================+
+End            |        
++===================================+
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+ <IfModule mod_rewrite.c>
+   RewriteEngine On
+   RewriteBase /
+
+   RewriteCond %{HTTPS} !=on
+   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+   # BEGIN WordPress
+   RewriteRule ^index\.php$ - [L]
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule . /index.php [L]
+ </IfModule>
+# END WordPress
+
+
+-**-;p7653
+
+
+<!--------2 method-------->
+https://htaccessbook.com/htaccess-redirect-https-www/
+
+
+RewriteRule ^index\.php/?$ / [L,R=301,NC]
+# Canonical HTTPS/non-WWW
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTPS} off [OR]
+	RewriteCond %{HTTP_HOST} ^www\.azureautodetailing\.com [NC]
+	RewriteRule (.*) https://azureautodetailing.com/$1 [L,R=301]
+</IfModule>
+
+
+
+
+
+
++===================================+
+End            |        
++===================================+
+
+
+cd /home/adaired/public_html/
+
+chmod 755 /home/betagetrevi/public_html/
+
+https://stackoverflow.com/questions/18352682/correct-file-permissions-for-wordpress
+cd /home/betagetrevi/public_html/
+find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
+find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
+
+find . -type d -exec chmod 555 {} \;
+
+
+
+
+
+<script type="text/javascript">
+function myFunction() {
+  var copyText = document.getElementById("mewyrinput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltipmewyri");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltipmewyri");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+
+function myFunction2() {
+  var copyText2 = document.getElementById("mewyrinput2");
+  copyText2.select();
+  copyText2.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip2 = document.getElementById("myTooltipmewyri2");
+  tooltip2.innerHTML = "Copied: " + copyText2.value;
+}
+
+function outFunc2() {
+  var tooltip2 = document.getElementById("myTooltipmewyri2");
+  tooltip2.innerHTML = "Copy to clipboard";
+}
+</script>
+
+
+
+ <script type="text/javascript">
+
+ <?php if( $post->ID == '9329') {?>
+   jQuery(document).unbind('copy', function(e) {
+        alert('Copy is allowed !!!');
+        e.preventDefault();
+    }); 
+ 
+<?php } else { ?>
+jQuery(document).bind('copy', function(e) {
+        alert('Copy is not allowed !!!');
+        e.preventDefault();
+    }); 
+ 
+<?php } ?>
+
+
+</script>
+
+
+https://themegrill.com/themes/spacious/
+
+	<ul class="ser-ul">
+	
+	
+How to add “Nofollow” for external links Automatically in WordPress
+
+add_filter('the_content', 'my_nofollow');
+add_filter('the_excerpt', 'my_nofollow');
+function my_nofollow($content) {
+    return preg_replace_callback('/&amp;lt;a[^&amp;gt;]+/', 'my_nofollow_callback', $content);
+}
+function my_nofollow_callback($matches) {
+    $link = $matches[0];
+    $site_link = get_bloginfo('url');
+    if (strpos($link, 'rel') === false) {
+        $link = preg_replace("%(href=\S(?!$site_link))%i", 'rel="nofollow" $1', $link);
+    } elseif (preg_match("%href=\S(?!$site_link)%i", $link)) {
+        $link = preg_replace('/rel=\S(?!nofollow)\S*/i', 'rel="nofollow"', $link);
+    }
+    return $link;
+}
+4:46
+https://www.netzole.com/how-to-add-nofollow-for-external-links-automatically-in-wordpress/
+
+
+
+
+
+<!----Css update---->
+
+how to show list in one coloum
+
+ grid-column-gap: 48px;
+    grid-row-gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+
+    
+
+    .hover-shadow:hover, .video-shadow {
+    box-shadow: 5px 5px rgba(255,59,63,.3), 10px 10px rgba(255,59,63,.2), 15px 15px rgba(255,59,63,.1), 20px 20px rgba(255,59,63,.05);
+}
+
+
+<p>We have customized one-stop-shop solutions for all your needs. Whether you need door repair, replacement, or installation services, we have you covered.</p>
+<div class="btn">
+
+<a href="/contact-us/ class="btn-cls"> <img src="/wp-content/uploads/2023/09/solar_arrow-left-broken.png" alt="phone">Request Estimate</a>
+<a href="tel:214-306-6684" class="btn-cls"> <img src="/wp-content/uploads/2023/09/material-symbols_call.png" alt="phone"> 214-306-6684</a>
+</div>
+
+
+
+
+    <form><input required="" type="text" placeholder="Enter Your Email" />
+<input type="submit" value="SUBSCRIBE" /></form>
+	<!----LSB pop---->
+	
+	
+<div class="hover_bkgr_fricc mainbd-wrapper" id="popcontseall">
+    <span class="helpers"></span>
+    <div class="pophtsec">
+<div class="pophtsecne" id="popmake-13177">
+        <div class="popupCloseButton">&times;</div>
+		<div class="heading">
+<h2>Website <span>Audit</span></h2>
+<p><b>Submit the detail below and we will get back to you shortly. </b>
+</p></div>
+		<?php echo do_shortcode('[contact-form-7 id="1898" title="Website Audit"]'); ?>
+		<div class="call-get">
+<b class="grecall">Or Call Us On</b>
+<h3><i class="fa fa-whatsapp" style="font-size:30px"></i><a href="tel:+1 (205) 273-6006">+1 (205) 273-6006</a></h3>
+</div>
+</div>
+      
+    </div> 
+</div>
+
+
+ <script type="text/javascript">
+
+jQuery(window).load(function () {
+    jQuery(".popmake-13177").click(function(){
+       jQuery('.hover_bkgr_fricc').show();
+    });
+
+  jQuery('.popupCloseButton').click(function(){
+        jQuery('.hover_bkgr_fricc').hide();
+    });
+    
+     jQuery('.popmake-13177').click(function(){
+         jQuery('html').addClass('htpop-open-overlay');
+    }); 
+    jQuery('.popupCloseButton').click(function(){
+         jQuery('html').removeClass('htpop-open-overlay');
+    });
+});
+	
+</script> 	
+	
++===================================+
+if else condition           |        
++===================================+
+	
+	
+	
+<?php
+						
+					    
+					  	if(is_front_page() || is_home())
+{
+
+    printf(
+        '<div class="banner__rgt15 tree"><img src="https://beta.localseobuzz.com/wp-content/uploads/2021/09/bannerelement6.png" class="" itemprop="logo" alt="%3$s"></div>',
+        esc_url( home_url( '/' ) ),
+        esc_url( get_theme_file_uri( 'https://beta.localseobuzz.com/wp-content/uploads/2021/09/bannerelement6.png' ) ),
+        get_bloginfo( 'name', 'display' )
+    );
+
+}
+	?>	
++===================================+
+End if else condition           |        
++===================================+
+
+
+
++===================================+
+add class jq         |        
++===================================+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script>
+$(document).ready(function(){
+    
+    $(document).on('change', '#find_us', function(){
+        $(this).addClass('intro-option');
+    });
+    
+});
+  </script>    
+        
+
+  +===================================+
+End add class         |        
++===================================+
+
+
+
+
++===================================+
+custom menu script and css       |        
++===================================+
+
+//   Mobile Menu
+
+function classToggle() {
+  const navs = document.querySelectorAll('.Navbar__Items')
+  
+  navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+}
+
+document.querySelector('.Navbar__Link-toggle').addEventListener('click', classToggle);
+jQuery(document).ready(function(){
+   jQuery(".navbar-toggle").click(function () {
+      jQuery(".icon-bar").toggleClass('intro');
+   });
+});
+
+/****mobile menu css****/stuIT+XWxkT0
+.navbar-toggle .icon-bar {  display: block;width: 22px;  height: 2px; border-radius: 1px;}
+.navbar-toggle .icon-bar+.icon-bar {margin-top: 4px;}
+button.navbar-toggle.collapsed {top: -50px;}
+nav.menu.Navbar__Items.Navbar__ToggleShow {  position: fixed;  left: 0px; right: 0px; top: -93px; z-index: 9999;padding: 72px 0 0;  height: 100em;}
+.Navbar__ToggleShow {  display: flex;}
+
+.navbar-toggle .icon-bar+.icon-bar {margin-top: 4px;}
+.navbar-toggle .icon-bar {   background: #f71c52;    position: relative;}
+.navbar-toggle .icon-bar.intro:nth-child(1) { transform: rotate(45deg);  top: 6px;}
+.navbar-toggle span.icon-bar.intro {background: #f71c52;  z-index: 999999;}
+.navbar-toggle .icon-bar.intro:nth-child(3) { transform: rotate(130deg);}
+.navbar-toggle {position: relative;    float: right;padding: 9px 10px;  margin-right: 15px;   margin-top: 8px; margin-bottom: 8px; background-color: transparent;  background-image: none; border: 1px solid transparent;
+    border-radius: 4px;z-index: 999999999;}
+.navbar-toggle .icon-bar.intro:nth-child(2) { display: none;}
+nav.nav-menu.menu.Navbar__Items.Navbar__ToggleShow {display: block;}
+.menu-primary-hid .main-title {  z-index: 0;}
+.Navbar__Link.Navbar__Link-toggle.col-md-8 {right: 6px;  position: absolute;top: 68px;    z-index: 99999;}
+button.navbar-toggle.collapsed {display:block;}
+.navbar-expand-lg.nav-menu.menu.Navbar__Items {  display: none;}
+ul.Navbar__Link { background: #30c7bf;  margin-top: 20px;  padding: 86px 34px 34px;  height: 100%;}
+nav.nav-menu ul {  display: block;}
+header.Navbar .menu ul li a {  font-size: 19px !important; width: 100% !important; border-bottom: 1px solid #ffffff42 !important; border-radius: 0 !important; padding: 14px 0 !important; display: block;
+}
+ul#menu-header-menu-1 { background: #30c7bf; margin-top: 20px; padding: 86px 34px 34px; height: 100%;}
+nav.navbar.nav-primary.navbar-expand-lg.nav-menu.menu.Navbar__Items.Navbar__ToggleShow { background: #30c7bf; margin-top: 20px; padding: 86px 34px 34px;height: 100%;}
+nav.navbar.nav-primary.navbar-expand-lg.nav-menu.menu.Navbar__Items.Navbar__ToggleShow {position: fixed; left: 0px; right: 0px; top: -93px;  z-index: 9999; padding: 72px 0 0; height: 100em;
+}
+/*****end menu css*****/
+
+
+
+https://ccbill.com/kb/install-angular-on-windows
+
++===================================+
+renowise theme ticket           |        
++===================================+
+
+why my home page header section load after full page load
+https://boldthemes.ticksy.com/submit/#100015419
+
+https://boldthemes.ticksy.com/ticket/2769705
+
+
+
+
+
+
+https://codepen.io/lexa2guy/pen/XwzRWa
+
+Can we schedule a meeting with the Server administrators on telephonic?
+
+
+dig +nssearch 173.168.64.38.in-addr.arpa.
+
+
+https://codepen.io/Smit29/pen/eYjwNxd
+
+
+
+
+
+
+sticky
+
+
+https://ultimateelementor.com/docs/sticky-header-with-ehf/
+// WordPress custom function
+function my_custom_function(){
+    ?>
+    <script>
+    	window.onscroll = function() {myFunction()};
+		// Get the header
+		var header = document.getElementById( "my-custom-id" );
+		// Get the offset position of the navbar
+		var sticky = header.offsetTop;
+		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+		  if ( window.pageYOffset > 40 ) {		    
+			header.classList.add( "hfe-sticky" );		  		
+		  } else {
+		  	setTimeout(function(){
+				header.classList.remove( "hfe-sticky" );		  		
+		  	}, 100);		    
+		  }
+		}
+    </script>
+    <?php
+}
+add_action('wp_footer', 'my_custom_function');
+
+========================================
+
+Blog code fonction file with shotcode   [get_all_blogs]
+========================================
+
+function print_page_num($i, $max_pages, $break, $crt_page){
+    for(;$i<=$max_pages; $i++){
+        
+        if($i >= $break && $break > 0) break;
+        
+        if($crt_page == $i) { ?>
+    <li class="active"><a href="<?php echo get_site_url(); ?>/blog/page/<?php echo $i; ?>/"><?php echo $i; ?></a></li>
+     <?php } else { ?>
+        <li><a href="<?php echo get_site_url(); ?>/blog/page/<?php echo $i; ?>/"><?php echo $i; ?></a></li>
+    <?php }
+        }
+}
+
+function all_blogs() {
+	ob_start();
+   
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : '1';
+$args = array (
+    'nopaging'               => false,
+    'paged'                  => $paged,
+    'posts_per_page'         => '6',
+    'post_type'              => 'post',
+);
+
+// The Query
+$query = new WP_Query( $args );
+
+// The Loop
+if ( $query->have_posts() ) {
+  
+$total = $query->found_posts;
+$max_pages = $query->max_num_pages;
+    
+    echo '<ul class="custom_posts">';
+    while ( $query->have_posts() ) {
+        $query->the_post();
+        echo '<li>';
+           
+            // post stuff here
+            $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+            <img class="post_image" src="<?php echo $url ?>" />
+            <span><i class="fa fa-calendar" aria-hidden="true"></i><?php echo get_the_date(); ?></span>
+            <h4 class="post-title"><?php echo the_title(); ?></h4>
+            <p><?php echo get_the_excerpt(); ?></p>
+            <a class="singlepost_link"  href="<?php echo post_permalink(); ?>" title="Read more">Read more</a>
+           
+           <?php 
+        echo '</li>';
+    }
+    echo '</ul>';
+    
+    ?>
+    
+    <ul class="blog-pagination">
+       <?php previous_posts_link( '<li>«</li>' );
+         
+         $crt_page = $query->query['paged'];
+        
+        
+        if($crt_page == $max_pages || $crt_page == ($max_pages-1)) {
+            $i = $max_pages-4;
+            print_page_num($i, $max_pages, 0, $crt_page);
+            
+        } else if($crt_page >= 4){
+            $i = $crt_page-2;
+            $max = $crt_page+2;
+            
+            print_page_num($i, $max, 0, $crt_page);
+            
+        } else {
+            print_page_num(1, $max_pages, 6, $crt_page);
+        }
+         
+        next_posts_link( '<li>»</li>', $max_pages );  ?>
+    </ul>
+
+
+<?php } else {
+    // no posts found
+    echo '<h4 class="post-title">No Posts Found</h4>';
+}
+
+// Restore original Post Data
+wp_reset_postdata();
+    
+     
+	return ob_get_clean();
+}
+
+add_shortcode( 'get_all_blogs', 'all_blogs' );
+
+
+
+
+
+
+========================================
+
+Blog code
+========================================
+
+
+
+
+
+
+
+
+
+
+betagrb
+aNWVifOT3Z4q
+
+
+
+Account Details
+========================================
+IP Address: 122.180.20.203
+Web Panel Login: 
+Domain: beta.grb
+Username: betagrb
+Password: aNWVifOT3Z4q
+Admin Email: my@email.com
+
+Panel URL: 
+http://localhost.localdomain:2082
+https://localhost.localdomain:2083
+
+NameServers:
+ns1.centos-webpanel.com
+ns2.centos-webpanel.com
+
+-> Checking if "/home/betagrb/public_html" folder if exist: [YES]
+
+
+
+
+
+https://codepen.io/ecemgo/pen/ZEVojzN
+
+https://codepen.io/kristen17/pen/poqMegm
+
+https://codepen.io/nathan-sr/pen/GRwYaQM
+
+https://codepen.io/RAX7/pen/gOvGBpQ
+
+
+https://codepen.io/wikyware-net/pen/MWpoaRE
+
+https://codepen.io/Autumnxy/pen/abPRbgb
+
+https://codepen.io/md-aqil/pen/abOVOKe
+
+https://codepen.io/Mehul_Rojasara/pen/QmNJoZ
+
+https://codepen.io/md-aqil/pen/QeMrRW
+
+
+
+https://codepen.io/ig_design/pen/eYJbaRB
+
+
+https://codepen.io/Reklino/embed/wawopV?
+
+
+
+https://codepen.io/RileyAdair/pen/ZvyYzr
+
+
+
+https://wbcomdesigns.com/wbcom-sale/
+
+
+
+
+
+
+
+
+
+
+
+
+// Create Shortcode to Display Movies Post Types
+ 
+function diwp_create_shortcode_movies_post_type(){
+ 
+ $args = array(
+                 'post_type'      => 'movies', // don't forget to replace it with your custom post type name
+                 'posts_per_page' => '10',
+                 'publish_status' => 'published',
+              );
+
+ $query = new WP_Query($args);
+
+ if($query->have_posts()) :
+
+     while($query->have_posts()) :
+
+         $query->the_post() ;
+                  
+     $result .= '<div class="movie-item">';
+     $result .= '<div class="movie-poster">' . get_the_post_thumbnail() . '</div>';
+     $result .= '<div class="movie-name">' . get_the_title() . '</div>';
+     $result .= '<div class="movie-desc">' . get_the_content() . '</div>'; 
+     $result .= '</div>';
+
+     endwhile;
+
+     wp_reset_postdata();
+
+ endif;    
+
+ return $result;            
+}
+
+add_shortcode( 'movies-list', 'diwp_create_shortcode_movies_post_type' ); 
+
+// shortcode code ends here
+
+
+
+
+
+<script type="text/javascript">
+var $ = jQuery;
+    $(document).ready(function(){
+        
+    $('.show-more').on('click', function(){
+        event.preventDefault()
+        $(this).toggleClass('content-hide')
+        $(this).closest('.main-cart').find('.show-less, .details-area').toggleClass('content-hide')
+    })
+    
+    $('.show-less').on('click', function(){
+        event.preventDefault()
+        $(this).toggleClass('content-hide')
+        $(this).closest('.main-cart').find('.show-more, .details-area').toggleClass('content-hide')
+    })
+    
+    })
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.content-hide{
+    display: none;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Add the Page Meta Box
+function codeless_add_custom_meta_box() {
+    add_meta_box(
+            'codeless_meta_box', 
+            'Codeless Page Options', // $title 
+            'codeless_show_custom_meta_box', // $callback
+            'page', // $page
+            'normal', // $context
+            'high'); // $priority
+}
+
+
+add_action('add_meta_boxes', 'codeless_add_custom_meta_box');
+
+
+// Add the Post Meta Box
+function codeless_add_custom_post_meta_box() {
+    add_meta_box(
+            'codeless_meta_box', // $id
+            'Codeless Page Options', // $title 
+            'codeless_show_custom_post_meta_box', // $callback
+            'post', // $post
+            'normal', // $context
+            'high'); // $priority
+}
+
+
+add_action('add_meta_boxes', 'codeless_add_custom_post_meta_box');
+
+
+$prefix = 'codeless_';
+
+
+// Field Array (Pages Meta)
+$codeless_meta_fields = array();
+
+
+// Field Array (Posts Meta)
+$codeless_post_meta_fields = array(
+    array(
+        'label' => 'Featured Video Embed Code',
+        'desc' => 'Paste your video code here to show a video instead of a featured image.',
+        'id' => $prefix . 'video_embed',
+        'type' => 'textarea'
+    )
+);
+
+
+// The Callback for page meta box
+function codeless_show_custom_meta_box() {
+    global $codeless_meta_fields;
+    codeless_show_page_meta_box($codeless_meta_fields);
+}
+
+
+// The Callback for post meta box
+function codeless_show_custom_post_meta_box() {
+    global $codeless_post_meta_fields;
+    codeless_show_page_meta_box($codeless_post_meta_fields);
+}
+
+
+// The Callback
+function codeless_show_page_meta_box($meta_fields) {
+
+
+    global $post;
+// Use nonce for verification
+    echo '<input type="hidden" name="custom_meta_box_nonce" value="' . wp_create_nonce(basename(__FILE__)) . '" />';
+
+
+    // Begin the field table and loop
+    echo '<table class="form-table">';
+    foreach ($meta_fields as $field) {
+        // get value of this field if it exists for this post
+        $meta = get_post_meta($post->ID, $field['id'], true);
+        // begin a table row with
+        echo '<tr>
+        <th><label for="' . $field['id'] . '">' . $field['label'] . '</label></th>
+        <td>';
+        switch ($field['type']) {
+
+
+            // text
+            case 'text':
+                echo '<input type="text" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" style="width:100%" />
+                                                    <br /><span class="description">' . $field['desc'] . '</span>';
+                break;
+
+
+            // textarea
+            case 'textarea':
+                echo '<textarea style="width:100%" rows="2" id="' . $field['id'] . '" name="' . $field['id'] . '">' . $meta . '</textarea>
+                                                    <br /><span class="description">' . $field['desc'] . '</span>';
+                break;
+
+
+            // checkbox
+            case 'checkbox':
+                echo '<input type="checkbox" name="' . $field['id'] . '" id="' . $field['id'] . '" ', $meta ? ' checked="checked"' : '', '/>
+                                                    <label for="' . $field['id'] . '">' . $field['desc'] . '</label>';
+                break;
+
+
+            // select
+            case 'select':
+                echo '<select name="' . $field['id'] . '" id="' . $field['id'] . '">';
+                foreach ($field['options'] as $option) {
+                    echo '<option', $meta == $option['value'] ? ' selected="selected"' : '', ' value="' . $option['value'] . '">' . $option['label'] . '</option>';
+                }
+                echo '</select><br /><span class="description">' . $field['desc'] . '</span>';
+                break;
+        } //end switch
+        echo '</td></tr>';
+    } // end foreach
+    echo '</table>'; // end table
+}
+
+
+// Save the Data
+function codeless_save_custom_meta($post_id) {
+    global $codeless_meta_fields;
+    global $codeless_post_meta_fields;
+
+
+    // verify nonce
+    if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
+        return $post_id;
+    // check autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+        return $post_id;
+    // check permissions
+    if ('page' == $_POST['post_type']) {
+        if (!current_user_can('edit_page', $post_id))
+            return $post_id;
+    } elseif (!current_user_can('edit_post', $post_id)) {
+        return $post_id;
+    }
+
+
+    //either post or page fields we'll be working with
+    $fields;
+
+
+    // Check permissions (pages or posts)
+    if ('page' == $_POST['post_type']) {
+
+
+        $fields = $codeless_meta_fields;
+    } else if ('post' == $_POST['post_type']) {
+
+
+        $fields = $codeless_post_meta_fields;
+    }
+
+
+    // loop through fields and save the data
+    foreach ($fields as $field) {
+        $old = get_post_meta($post_id, $field['id'], true);
+        $new = $_POST[$field['id']];
+        if ($new && $new != $old) {
+            update_post_meta($post_id, $field['id'], $new);
+        } elseif ('' == $new && $old) {
+            delete_post_meta($post_id, $field['id'], $old);
+        }
+    } // end foreach
+}
+
+
+add_action('save_post', 'codeless_save_custom_meta');
+?>
+
+
+
+
+/***Removed feed upl in wp function.php file**************/
+
+
+
+function disable_feed_links() {
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+}
+add_action('init', 'disable_feed_links');
+// Redirect feed requests to the original page
+function redirect_feed_requests_to_original_page($query) {
+if ($query->is_feed) {
+global $wp;
+$current_url = home_url(add_query_arg(array(), $wp->request));
+$original_url = preg_replace('/\/feed(\/.*|$)/', '', $current_url);
+wp_redirect($original_url, 301);
+exit;
+}
+}
+add_action('parse_query', 'redirect_feed_requests_to_original_page');
+
+
+
+
+
+/***end Removed feed upl in wp function.php file**************/
+
+
+
+
+
+
+https://codepen.io/veronicadev/pen/WJyOwG
